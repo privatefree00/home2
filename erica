@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>@Erica</title>
+	  <meta property="og:image" content="https://ik.imagekit.io/9pay9gq9g/franciiscaam8_20210823_p_2646129377073667533_1_2646129374363923695.jpg?updatedAt=1711910774713" /> 
+    <meta property="og:title" content="@Erica" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="freelivecam" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+	<header>
+		<div class="overlay"></div>
+		<video class="video"loop="" autoplay="" muted="" playsinline="">
+			<!-- <source src="" type="video/mp4"> -->
+			<source src="https://video.twimg.com/ext_tw_video/1853420033596399616/pu/vid/avc1/720x1280/SHlosDLIpszPb4FH.mp4?tag=12" type="video/mp4">
+		</video>
+		<div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+				<div class="w-100 text-white">
+					<h1 class="display-3"><img src="" style="width: 350px"></h1>
+					<h1 class="display-6"></h1>
+					<p class="lead mb-0">FOR MORE CONTENT JOIN ME BELOW</p>
+					<br/>
+					<br/>	
+					<p class="lead mb-1"><strong></strong></p>
+					<br/>
+					<br/>
+					<a href="https://www.biox.my.id/lossone" class="btn btn-link btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">PRIVATE</a>
+					<a href="https://www.biox.my.id/lossone" class="btn btn-link btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">LIVECAM</a>
+					<a href="https://www.biox.my.id/traxtwo" class="btn btn-link btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">FREEVIDEO</a>
+					<a href="https://www.biox.my.id/traxtwo" class="btn btn-link btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">MEETME</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<script src="jquery-3.5.1.slim.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+      function disableSelection(e) {
+          if (typeof e.onselectstart != "undefined") e.onselectstart = function() {
+              return false
+          };
+          else if (typeof e.style.MozUserSelect != "undefined") e.style.MozUserSelect = "none";
+          else e.onmousedown = function() {
+              return false
+          };
+          e.style.cursor = "default"
+      }
+      window.onload = function() {
+          disableSelection(document.body)
+      }
+  </script>
+  
+  <script type="text/javascript">
+      function mousedwn(e) {
+          try {
+              if (event.button == 2 || event.button == 3) return false
+          } catch (e) {
+              if (e.which == 3) return false
+          }
+      }
+      document.oncontextmenu = function() {
+          return false
+      };
+      document.ondragstart = function() {
+          return false
+      };
+      document.onmousedown = mousedwn
+  </script>
+</html>

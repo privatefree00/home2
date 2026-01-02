@@ -27,6 +27,7 @@ export const onRequest = async (context) => {
     "/lorena",
     "/cristiana",
     "/teresa",
+    "/luna",
     "/rebeca"
   ];
 

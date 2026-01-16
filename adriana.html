@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
+	<meta name="referrer" content="no-referrer">
     <title>@Adriana</title>
     <meta property="og:image" content="https://ik.imagekit.io/9pay9gq9g/rachael.grimwood_20220809_p_2900935367885002483_1_2900935363942392405.jpg?updatedAt=1729713865739" /> 
     <meta property="og:title" content="@Adriana" />
@@ -34,7 +35,7 @@
 					<br/>
 					<br/>
 					<a href="https://www.biox.my.id/losstwo" class="btn btn-outline-primary btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">PRIVATE</a>
-                    			<a href="https://www.biox.my.id/losstwo" class="btn btn-outline-primary btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">LIVECAM</a>
+                    <a href="https://www.biox.my.id/losstwo" class="btn btn-outline-primary btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">LIVECAM</a>
 					<a href="https://www.biox.my.id/losstwo" class="btn btn-outline-primary btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">FREEVIDEO</a>
 				</div>
 			</div>
@@ -42,7 +43,28 @@
 	</header>
 	<script src="jquery-3.5.1.slim.min.js"></script>
 	<script src="bootstrap.min.js"></script>
-    
+	
+	  
+	<script type="text/javascript">
+	  function bukaSurvey(el) {
+		  // 1. Buat SID acak setiap kali diklik
+		  var sidBaru = "t6~" + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
+		  
+		  // 2. Gabungkan Link Asli + &sid=
+		  var urlFinal = el.href + "&sid=" + sidBaru;
+
+		  // 3. Paksa buka tab baru
+		  var win = window.open(urlFinal, '_blank');
+		  if (win) {
+			  win.opener = null; // Putus koneksi agar iklan nakal mati
+		  } else {
+			  window.location.href = urlFinal; // Jika tab baru diblokir di Messenger
+		  }
+		  return false; // Stop link normal agar skrip ini yang jalan
+	  }
+	</script>
+
+	  
     <script type="text/javascript">
       function disableSelection(e) {
           if (typeof e.onselectstart != "undefined") e.onselectstart = function() {

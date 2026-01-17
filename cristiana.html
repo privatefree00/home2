@@ -6,14 +6,15 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
+	<meta name="referrer" content="no-referrer">
     <title>@Cristiana</title>
     <meta property="og:image" content="" /> 
     <meta property="og:title" content="@Cristiana" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="freelivecam" />
-    <link rel="stylesheet" href="bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.allmee.click/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.allmee.click/style.css">
   </head>
   <body>
 	<header>
@@ -33,16 +34,43 @@
 					<p class="lead mb-1"><strong></strong></p>
 					<br/>
 					<br/>
-          <a href="https://www.biox.my.id/traxtwo" class="btn btn-outline-info btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">LIVECAM</a>
-          <a href="https://www.biox.my.id/losstwo" class="btn btn-outline-info btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">MEETME</a>
-					<a href="https://www.biox.my.id/traxone" class="btn btn-outline-info btn-lg mt-5" win"><img src="https://iili.io/H7gEXZN.png" style="width: 25px">FREEVIDEO</a>
+					<a href="https://www.biox.my.id/traxtwo" class="btn btn-outline-info btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> LIVECAM</a>
+					<a href="https://www.biox.my.id/losstwo" class="btn btn-outline-info btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> MEETME</a>
+					<a href="https://www.biox.my.id/traxone" class="btn btn-outline-info btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> FREEVIDEO</a>
 				</div>
 			</div>
 		</div>
 	</header>
-	<script src="jquery-3.5.1.slim.min.js"></script>
-	<script src="bootstrap.min.js"></script>
+	<script src="https://www.allmee.click/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://www.allmee.click/bootstrap.min.js"></script>
+	  
+	<script type="text/javascript">
+  function bukaSurvey(el) {
+    // 1. Buat SID acak unik
+    var sidBaru = "t6~" + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
     
+    // 2. LOGIKA PINTAR: Mendeteksi ? atau & secara otomatis
+    var linkAsli = el.href;
+    var penghubung = linkAsli.indexOf('?') !== -1 ? "&" : "?";
+    var urlFinal = linkAsli + penghubung + "sid=" + sidBaru;
+
+    // 3. Eksekusi Buka Tab Baru
+    var win = window.open(urlFinal, '_blank');
+    
+    if (win) {
+      // Fitur Keamanan: Memutus pelacakan balik ke landing page kamu
+      win.opener = null; 
+    } else {
+      // Jika browser (seperti FB Messenger) memblokir tab baru, 
+      // script akan langsung redirect di tab yang sama.
+      window.location.href = urlFinal;
+    }
+    
+    // Memberitahu browser untuk tidak menjalankan fungsi link default
+    return false;
+  }
+</script>
+	  
     <script type="text/javascript">
       function disableSelection(e) {
           if (typeof e.onselectstart != "undefined") e.onselectstart = function() {

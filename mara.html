@@ -8,13 +8,72 @@
     <meta name="generator" content="Jekyll v4.1.1">
 	<meta name="referrer" content="no-referrer">
     <title>@Mara</title>
-    <meta property="og:image" content="">
-	<meta property="og:title" content="@Mara" />
+	<meta property="og:image" content="" /> 
+    <meta property="og:title" content="@Mara" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="freelivecam" />
-    <link rel="stylesheet" href="https://www.allmee.click/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.allmee.click/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+	<style>
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+  
+header video {
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: 0;
+-ms-transform: translateX(-50%) translateY(-50%);
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+}
+  
+header .container {
+position: relative;
+z-index: 2;
+}
+
+header .overlay {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: black;
+opacity: 0.5;
+z-index: 1;
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+@media (pointer: coarse) and (hover: none) {
+header {
+    /* background: url('video/girl-dancing.mp4') black no-repeat center center scroll; */
+}
+header video {
+    /* display: none; */
+}
+}
+</style>
+
   </head>
   <body>
 	<header>
@@ -34,39 +93,39 @@
 					<p class="lead mb-1"><strong></strong></p>
 					<br/>
 					<br/>
-					<a href="https://www.biox.my.id/traxtwo" class="btn btn-outline-success btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> PRIVATE</a>
-					<a href="https://www.biox.my.id/traxtwo" class="btn btn-outline-success btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> LIVECAM</a>
-					<a href="https://www.biox.my.id/traxone" class="btn btn-outline-success btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> FREEVIDEO</a>
+					<a href="https://all.biolinksx.my.id/" class="btn btn-outline-success btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> PRIVATE</a>
+					<a href="https://all.biolinksx.my.id/" class="btn btn-outline-success btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> LIVECAM</a>
+					<a href="https://all.biolinksx.my.id/" class="btn btn-outline-success btn-lg mt-5" onclick="return bukaSurvey(this);"><img src="https://iili.io/H7gEXZN.png" style="width: 25px"> FREEVIDEO</a>
 				</div>
 			</div>
 		</div>
 	</header>
-	<script src="https://www.allmee.click/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://www.allmee.click/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
 	  
 	<script type="text/javascript">
   function bukaSurvey(el) {
-    // 1. Buat SID acak unik
+    // 
     var sidBaru = "t6~" + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
     
-    // 2. LOGIKA PINTAR: Mendeteksi ? atau & secara otomatis
+    // 
     var linkAsli = el.href;
     var penghubung = linkAsli.indexOf('?') !== -1 ? "&" : "?";
     var urlFinal = linkAsli + penghubung + "sid=" + sidBaru;
 
-    // 3. Eksekusi Buka Tab Baru
+    //
     var win = window.open(urlFinal, '_blank');
     
     if (win) {
-      // Fitur Keamanan: Memutus pelacakan balik ke landing page kamu
+      // 
       win.opener = null; 
     } else {
-      // Jika browser (seperti FB Messenger) memblokir tab baru, 
-      // script akan langsung redirect di tab yang sama.
+      // 
+      // 
       window.location.href = urlFinal;
     }
     
-    // Memberitahu browser untuk tidak menjalankan fungsi link default
+    // 
     return false;
   }
 </script>

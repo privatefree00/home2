@@ -8,7 +8,7 @@
     <meta name="generator" content="Jekyll v4.1.1">
 	<meta name="referrer" content="no-referrer">
     <title>@irissimoes</title>
-	<meta property="og:image" content="" /> 
+	<meta property="og:image" content="https://cdn.jsdelivr.net/gh/myclair4/web-img/img11.jpg" /> 
     <meta property="og:title" content="@irissimoes" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
@@ -105,27 +105,27 @@ header video {
 	  
 	<script type="text/javascript">
   function bukaSurvey(el) {
-    // 1. Buat SID acak unik
+    //
     var sidBaru = "t6~" + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
     
-    // 2. LOGIKA PINTAR: Mendeteksi ? atau & secara otomatis
+    // 
     var linkAsli = el.href;
     var penghubung = linkAsli.indexOf('?') !== -1 ? "&" : "?";
     var urlFinal = linkAsli + penghubung + "sid=" + sidBaru;
 
-    // 3. Eksekusi Buka Tab Baru
+    // 
     var win = window.open(urlFinal, '_blank');
     
     if (win) {
-      // Fitur Keamanan: Memutus pelacakan balik ke landing page kamu
+      // 
       win.opener = null; 
     } else {
-      // Jika browser (seperti FB Messenger) memblokir tab baru, 
-      // script akan langsung redirect di tab yang sama.
+      // 
+      // 
       window.location.href = urlFinal;
     }
     
-    // Memberitahu browser untuk tidak menjalankan fungsi link default
+    // 
     return false;
   }
 </script>
